@@ -10,42 +10,45 @@ let opcionUsuario1;
 let opcionUsuario2;
 let juegoNuevo = 1
 
+let usuario1 = prompt("Ingrese nombre del Usuario 1");
+let usuario2 = prompt("Ingrese nombre del Usuario 2");
+
 
 
 while (juegoNuevo == 1) {
-    opcionUsuario1 = prompt("¿Qué eliges Usuario 1?\nPiedra: 0\nPapel: 1\nTijera: 2", 0);
-    opcionUsuario2 = prompt("¿Qué eliges Usuario 2?\nPiedra: 0\nPapel: 1\nTijera: 2", 0);
+    opcionUsuario1 = prompt(`¿Qué eliges ${usuario1}?\nPiedra: 0\nPapel: 1\nTijera: 2`, 0);
+    opcionUsuario2 = prompt(`¿Qué eliges ${usuario2}?\nPiedra: 0\nPapel: 1\nTijera: 2`, 0);
 
-    alert("Usuario 1 eligió " + opciones[opcionUsuario1]);
-    alert("Usuario 2 eligió " + opciones[opcionUsuario2]);
+    alert(`${usuario1} eligió ` + opciones[opcionUsuario1]);
+    alert(`${usuario2} eligió ` + opciones[opcionUsuario2]);
     if (opcionUsuario1 == piedra) {
         if (opcionUsuario2 == piedra) {
             alert("Empate!");
         }
         else if (opcionUsuario2 == papel) {
-            alert("Gana Usuario 2");
+            alert(`Gana ${usuario2}`);
         }
         else if (opcionUsuario2 == tijera) {
-            alert("Ganaste Usuario 1");
+            alert(`Gana ${usuario1}`);
         }
     }
     else if (opcionUsuario1 == papel) {
         if (opcionUsuario2 == piedra) {
-            alert("Ganaste Usuario 1");
+            alert(`Gana ${usuario1}`);
         }
         else if (opcionUsuario2 == papel) {
             alert("Empate!");
         }
         else if (opcionUsuario2 == tijera) {
-            alert("Gana Usuario 2");
+            alert(`Gana ${usuario2}`);
         }
     }
     else if (opcionUsuario1 == tijera) {
         if (opcionUsuario2 == piedra) {
-            alert("Gana Usuario 2");
+            alert(`Gana ${usuario2}`);
         }
         else if (opcionUsuario2 == papel) {
-            alert("Ganaste Usuario 1");
+            alert(`Gana ${usuario1}`);
         }
         else if (opcionUsuario2 == tijera) {
             alert("Empate!");
