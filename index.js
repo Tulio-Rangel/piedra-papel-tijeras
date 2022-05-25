@@ -58,6 +58,7 @@ while (juegoNuevo == 1) {
     else {
         alert("¿Qué pasó?");
     }
+    //¿Reiniciar el juego?
     reiniciar = prompt("¿Jugar de nuevo?\nSí: 0\nNo: 1", 0);
     if (reiniciar == si) {
         juegoNuevo = 1;
